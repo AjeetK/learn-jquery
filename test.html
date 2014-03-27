@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title> ajax demo</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="bootstrap.js"></script>
+
+	</head>
+	<body>
+		this is ajax demo
+		<input class= "form-control" type="text" name="usn">
+		<p id="gha"> </p>
+		<script >
+		$(document).ready(function(){
+	/*	  var gh =$.ajax({
+		  	url: "https://api.github.com/users/Ankit-Kulkarni",
+		  	 statusCode: {
+		  	404: function() {
+		  	alert( "page not found" );
+		  	}
+		  	},
+		  	context: document.body
+		  }).done(function() {
+		  alert("hello");
+		  });
+
+		  console.log(gh);*/
+
+		  $.ajax({
+		  url: "http://fiddle.jshell.net/favicon.png"
+		  })
+		  .done(function( data ) {
+		  if ( console && console.log ) {
+		  console.log( "Sample of data:", data.slice( 0, 100 ) );
+		  }
+		  });
+
+		}); 
+		</script>
+	</body>
+</html>
+
