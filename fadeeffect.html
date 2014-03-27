@@ -1,0 +1,30 @@
+<html>
+	<head>
+	<title>First jquery example</title>
+	<!-- This line will load the bootstrap css file  -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<!-- This file will load jquery file so that we can use its function -->
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	</head>
+	<body>
+	<div class="panel panel-primary">
+		<h3 class="text-primary" align="center"> jquery example : fade</h3>
+		
+	</div>
+	<div id="div1" class="panel panel-primary" style="display:none;back-ground:purple">
+		<p  align="center" class="text text-primary">This is a sample text with id="1" which is going to get fade on the click of button below</p>
+	</div>
+	<div align="center">
+		<button name="button" value="Click here to show" class="btn btn-md btn-primary">Click here to show</button>
+	</div>
+	</body>
+	<script type="text/javascript">
+	$(document).ready(function(){
+  		
+
+  		$("button").click(function(){
+  			$("#div1").fadeIn("slow");
+  		});
+	});
+	</script>
+</html>
