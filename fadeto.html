@@ -1,0 +1,31 @@
+<html>
+	<head>
+	<title>jquery example</title>
+	<!-- This line will load the bootstrap css file  -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<!-- This file will load jquery file so that we can use its function -->
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	</head>
+	<body>
+	<div class="panel panel-primary">
+		<h3 class="text-primary" align="center"> jquery example : fadeTo() method</h3>
+		
+	</div>
+	<div id="div1" class="panel panel-primary" style="background-color:yellow;">
+		<p  align="center" class="text text-primary">This is a sample text in a div with id="1" which is going to get fade on the click of button below</p>
+	</div>
+	<div align="center">
+		<button name="button" value="Click here to show" class="btn btn-md btn-primary">Click here to show/hide the text</button>
+	</div>
+	</body>
+	<script type="text/javascript">
+	$(document).ready(function(){
+  		$("button").click(function(){
+  			/*The code below will fade the div with id=div1 to the opacity specified in the second parameter of fadeTo function*/
+  			/*This is the syntax of fadeTo() method. Here opacity value may vary between 0 and 1
+  			$(selector).fadeTo(speed,opacity,callback);*/
+  			$("#div1").fadeTo("slow",0.4);
+  		});
+	});
+	</script>
+</html>
