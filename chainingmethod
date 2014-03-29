@@ -1,0 +1,32 @@
+<html>
+	<head>
+	<title>jquery example</title>
+	<!-- This line will load the bootstrap css file  -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<!-- This file will load jquery file so that we can use its function -->
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	</head>
+	<body>
+	<div class="panel panel-primary">
+		<h3 class="text-primary" align="center"> jquery example : chaining method</h3>
+		
+	</div>
+	<div id="div1" class="panel panel-primary" style="background-color:yellow;">
+		<p  align="center" class="text text-primary">Click on this panel to slide down another panel below this
+		and you are going to see the magic of chaining method.
+		</p>
+	</div>
+	<div id="div2" align="center" style="background-color:yellow;display:none;height:200px;" class="panel panel-primary" >
+		<p align="center"  class="text text-primary">This is the under the div with id="div2"</p>
+	</div>
+	</body>
+	<script type="text/javascript">
+	$(document).ready(function(){
+  		$("#div1").click(function(){
+  			/*On the click of div with id="div1" the dive with id="div2" will slide down slowly
+  			syntax : $(selector).slideDown(speed,callback);*/
+  			$("#div2").css("background-color","red").slideDown("slow").slideUp("slow").hide("slow");
+  		});
+	});
+	</script>
+</html>

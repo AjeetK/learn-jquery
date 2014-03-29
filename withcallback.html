@@ -1,0 +1,34 @@
+<html>
+	<head>
+	<title>First jquery example</title>
+	<!-- This line will load the bootstrap css file  -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<!-- This file will load jquery file so that we can use its function -->
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	</head>
+	<body>
+	<div class="panel panel-primary">
+		<h3 class="text-primary" align="center">jquery example : With callback</h3>
+		<div class="panel panel-primary">
+		<p align="center">Click on the this text and it will be hidden<br>
+		And you will see an alert box when this text will be hidden completely</p><br>
+		<!-- <p align="center">This is the second text to hide</p> -->
+		</div>
+	</div>
+	</body>
+	<script type="text/javascript">
+	/*Syntax for callback :
+	$(selector).hide(speed,callback);/
+
+	/*javascript function are executed line by line, next line will be executed even if the effect is not yet over.
+	To prevent execution of next line if the current line hasn't executed fully, callback functions are used.
+	Below is an example of callback functiond which prevents the execution of alert before the text disappears completely. */
+	$(function(){
+		$("p").click(function(){
+    		$(this).hide("slow",function(){
+    			alert("hide effect is over, that is why you are seeing this");
+    		});
+  		});
+	});
+	</script>
+</html>

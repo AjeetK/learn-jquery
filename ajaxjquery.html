@@ -1,0 +1,32 @@
+<html>
+	<head>
+	<title>AJAX and JQuery</title>
+	<!-- This line will load the bootstrap css file  -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<!-- This file will load jquery file so that we can use its function -->
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	</head>
+	<body>
+	<div class="panel panel-primary">
+		<h3 class="text-primary" align="center"> AJAX and JQuery</h3>
+		
+	</div>
+	<div id="div1" class="panel panel-primary" style="background-color:yellow;">
+		<p  align="center" class="text text-primary">Click on the button and you will see the data imported from the link : 
+		https://api.github.com/users/ajeetk and will be displayed here.
+		</p>
+	</div>
+	<div align="center"><button align="center" class="btn btn-md btn-primary">Click Me</button></div>
+	
+	</body>
+	<script type="text/javascript">
+	$(document).ready(function(){
+  		$("button").click(function(){
+  $.get("https://api.github.com/users/ajeetk",function(data,status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+  $("#div1").load("https://api.github.com/users/ajeetk");
+});
+	});
+	</script>
+</html>
